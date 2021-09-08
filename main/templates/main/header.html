@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<head>
+  <title>Ok</title>
+  {% load static %}
+  <link href="{% static 'tinymce/css/prism.css' %}" rel = "stylesheet">
+  <!-- Compiled and minified CSS -->
+  <link href="{% static 'main/css/materialize.css' %}" rel = "stylesheet">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</head>
+
+<body>
+
+  {% include "main/includes/navbar.html" %}
+
+  <div class="container">
+    <break>  
+      {% block content %}
+      {% endblock %}
+    </break> 
+  </div>  
+     
+      
+</body>
+
+<script src = "{% static 'tiny/js/prism.js' %}"></script>
+<script>
+  M.AutoInit();
+</script>
